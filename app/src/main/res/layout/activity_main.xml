@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F4F6FC">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingBottom="24dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp" android:background="#315CFE">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Asistente Acción" android:textColor="#FFFFFF" android:textSize="28sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Control básico del teléfono por comandos" android:textColor="#DCE4FF" android:textSize="15sp" android:layout_marginTop="5dp" />
+    </LinearLayout>
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" app:cardCornerRadius="18dp" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COMANDO" android:textColor="#315CFE" android:textStyle="bold" android:textSize="12sp" />
+            <EditText android:id="@+id/commandInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Ej.: abrí WhatsApp" android:inputType="textCapSentences" android:singleLine="true" android:layout_marginTop="8dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="10dp">
+                <Button android:id="@+id/runButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Ejecutar" android:textAllCaps="false" android:textColor="#FFFFFF" android:backgroundTint="#315CFE" />
+                <Button android:id="@+id/voiceButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Hablar" android:textAllCaps="false" android:layout_marginStart="8dp" />
+            </LinearLayout>
+            <TextView android:id="@+id/serviceStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Servicio de accesibilidad: revisando..." android:textColor="#666A78" android:textSize="13sp" android:layout_marginTop="10dp" />
+            <Button android:id="@+id/accessibilityButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Activar Servicio de Accesibilidad" android:textAllCaps="false" android:layout_marginTop="6dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aplicaciones instaladas" android:textColor="#20222B" android:textStyle="bold" android:textSize="20sp" android:layout_marginStart="18dp" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Toca una para abrirla" android:textColor="#777B8B" android:textSize="14sp" android:layout_marginStart="18dp" android:layout_marginTop="3dp" />
+    <LinearLayout android:id="@+id/appsContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp" />
+</LinearLayout>
+</ScrollView>
